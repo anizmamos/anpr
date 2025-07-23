@@ -81,7 +81,7 @@ def anpr():
                 }), 500
             
             finally:
-                for path in [file_path]:
+                for path in [file_path, result_path]:
                     if os.path.exists(path):
                         os.remove(path)
     
