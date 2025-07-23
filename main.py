@@ -81,9 +81,8 @@ def anpr():
                 }), 500
             
             finally:
-                for path in [file_path, result_path]:
-                    if os.path.exists(path):
-                        os.remove(path)
+                if os.path.exists(file_path):
+                    os.remove(file_path)
     
     except Exception as e:
         return jsonify({'error': f'Внутренняя ошибка сервера: {str(e)}'}), 500
